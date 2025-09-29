@@ -3,39 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Society 17</title>
+    <title>Society 17 - Management</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-gray-100 font-sans">
+<body class="bg-gray-50 font-sans">
     <!-- Navigation Bar -->
-    <nav class="bg-blue-600 text-white p-4">
+    <nav class="bg-indigo-600 text-white p-4 sticky top-0 shadow-md">
         <div class="container mx-auto flex justify-between items-center">
             <h1 class="text-2xl font-bold">Society 17</h1>
             <ul class="flex space-x-6">
                 <li><a href="#" class="hover:text-gray-200">Home</a></li>
-                <li><a href="#" class="hover:text-gray-200">About</a></li>
-                <li><a href="#" class="hover:text-gray-200">Services</a></li>
-                <li><a href="#" class="hover:text-gray-200">Contact</a></li>
+                <li><a href="#announcements" class="hover:text-gray-200">Announcements</a></li>
+                <li><a href="#events" class="hover:text-gray-200">Events</a></li>
+                <li><a href="#contact" class="hover:text-gray-200">Contact</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white h-screen flex items-center justify-center">
+    <section class="bg-gradient-to-r from-indigo-500 to-blue-600 text-white py-20 flex items-center justify-center">
         <div class="text-center">
-            <h2 class="text-4xl md:text-6xl font-extrabold mb-4">Welcome to Society 17</h2>
-            <p class="text-lg md:text-xl mb-6">Building a vibrant community for the future.</p>
-            <button id="toggleButton" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition">
-                Toggle Message
-            </button>
-            <p id="message" class="mt-4 text-lg hidden">Hello, Society 17 Community!</p>
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-4">Society 17 Management</h2>
+            <p class="text-lg md:text-xl mb-6">Stay connected with our community updates and events!</p>
+            <a href="#announcements" class="bg-white text-indigo-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition">View Announcements</a>
+        </div>
+    </section>
+
+    <!-- Announcements Section -->
+    <section id="announcements" class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <h3 class="text-3xl font-bold text-center mb-8">Announcements</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                    <h4 class="text-xl font-semibold mb-2">Maintenance Schedule</h4>
+                    <p class="text-gray-700 mb-4">Elevator maintenance is scheduled for October 5, 2025, from 9 AM to 12 PM.</p>
+                    <button class="read-btn bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700" data-id="1">Mark as Read</button>
+                    <span class="read-status text-sm text-gray-500 hidden ml-2">Read</span>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                    <h4 class="text-xl font-semibold mb-2">Community Meeting</h4>
+                    <p class="text-gray-700 mb-4">Join us for the monthly meeting on October 10, 2025, at 6 PM in the clubhouse.</p>
+                    <button class="read-btn bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700" data-id="2">Mark as Read</button>
+                    <span class="read-status text-sm text-gray-500 hidden ml-2">Read</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h3 class="text-3xl font-bold text-center mb-8">Upcoming Events</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="text-xl font-semibold mb-2">Diwali Celebration</h4>
+                    <p class="text-gray-700">November 1, 2025, 7 PM - 10 PM at the community park.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="text-xl font-semibold mb-2">Yoga Session</h4>
+                    <p class="text-gray-700">Every Sunday in October, 8 AM at the clubhouse.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="text-xl font-semibold mb-2">Kids' Art Workshop</h4>
+                    <p class="text-gray-700">October 15, 2025, 3 PM - 5 PM at the activity center.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-12 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h3 class="text-3xl font-bold mb-8">Contact Us</h3>
+            <p class="text-gray-700 mb-4">Reach out to the Society 17 management team:</p>
+            <p class="text-gray-700">Email: contact@society17.com</p>
+            <p class="text-gray-700">Phone: +123-456-7890</p>
+            <p class="text-gray-700">Address: 123 Society Lane, Community City</p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white p-4 text-center">
+    <footer class="bg-indigo-600 text-white p-4 text-center">
         <p>&copy; 2025 Society 17. All rights reserved.</p>
     </footer>
 
