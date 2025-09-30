@@ -3,49 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Society 17 - Management</title>
+    <meta name="description" content="Society 17 - Community management in Bashundhara, Dhaka, Bangladesh. Stay updated with announcements and events.">
+    <meta name="keywords" content="Society Management, Dhaka, Bashundhara, Community Events, Announcements, Bangladesh">
+    <meta name="author" content="Society 17">
+    
+    <!-- Google Fonts for professional typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Tailwind config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-bg': '#121212',
+                        'dark-surface': '#1e1e1e',
+                        'dark-accent': '#bb86fc',
+                        'dark-text': '#e0e0e0',
+                        'dark-secondary': '#b0b0b0',
+                        'dark-hero': '#2d3748'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
+    
+    <title>Society 17 - Management</title>
 </head>
-<body class="bg-gray-50 font-sans">
+<body class="bg-gray-50 font-roboto transition-colors duration-300">
     <!-- Navigation Bar -->
-    <nav class="bg-indigo-600 text-white p-4 sticky top-0 shadow-md">
+    <nav class="bg-indigo-600 text-white p-4 sticky top-0 shadow-md z-50">
         <div class="container mx-auto flex justify-between items-center">
             <h1 class="text-2xl font-bold">Society 17</h1>
-            <ul class="flex space-x-6">
-                <li><a href="#" class="hover:text-gray-200">Home</a></li>
-                <li><a href="#announcements" class="hover:text-gray-200">Announcements</a></li>
-                <li><a href="#events" class="hover:text-gray-200">Events</a></li>
-                <li><a href="#contact" class="hover:text-gray-200">Contact</a></li>
-            </ul>
+            <div class="flex items-center space-x-6">
+                <ul class="flex space-x-6">
+                    <li><a href="#" class="hover:text-dark-accent transition">Home</a></li>
+                    <li><a href="#announcements" class="hover:text-dark-accent transition">Announcements</a></li>
+                    <li><a href="#events" class="hover:text-dark-accent transition">Events</a></li>
+                    <li><a href="#contact" class="hover:text-dark-accent transition">Contact</a></li>
+                </ul>
+                <button id="themeToggle" class="p-2 rounded-full bg-gray-200 hover:bg-gray-300 text-gray-700 transition">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="bg-gradient-to-r from-indigo-500 to-blue-600 text-white py-20 flex items-center justify-center">
+    <section class="bg-gradient-to-r from-dark-hero to-gray-800 text-white py-20 flex items-center justify-center transition-colors duration-300">
         <div class="text-center">
             <h2 class="text-4xl md:text-5xl font-extrabold mb-4">Society 17 Management</h2>
-            <p class="text-lg md:text-xl mb-6">Stay connected with our community updates and events!</p>
-            <a href="#announcements" class="bg-white text-indigo-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition">View Announcements</a>
+            <p class="text-lg md:text-xl mb-6 max-w-2xl mx-auto">Stay connected with our community updates and events in Bashundhara, Dhaka!</p>
+            <a href="#announcements" class="bg-dark-accent text-dark-bg px-6 py-3 rounded-full font-semibold hover:bg-purple-500 transition btn-hover">View Announcements</a>
         </div>
     </section>
 
     <!-- Announcements Section -->
-    <section id="announcements" class="py-12 bg-white">
+    <section id="announcements" class="py-12 bg-white transition-colors duration-300">
         <div class="container mx-auto px-4">
-            <h3 class="text-3xl font-bold text-center mb-8">Announcements</h3>
+            <h3 class="text-3xl font-bold text-center text-gray-800 mb-8">Announcements</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="bg-gray-100 p-6 rounded-lg shadow-md">
-                    <h4 class="text-xl font-semibold mb-2">Maintenance Schedule</h4>
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-xl transition fade-in">
+                    <h4 class="text-xl font-semibold mb-2 text-gray-800">Maintenance Schedule</h4>
                     <p class="text-gray-700 mb-4">Elevator maintenance is scheduled for October 5, 2025, from 9 AM to 12 PM.</p>
-                    <button class="read-btn bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700" data-id="1">Mark as Read</button>
+                    <button class="read-btn bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition btn-hover" data-id="1">Mark as Read</button>
                     <span class="read-status text-sm text-gray-500 hidden ml-2">Read</span>
                 </div>
-                <div class="bg-gray-100 p-6 rounded-lg shadow-md">
-                    <h4 class="text-xl font-semibold mb-2">Community Meeting</h4>
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-xl transition fade-in">
+                    <h4 class="text-xl font-semibold mb-2 text-gray-800">Community Meeting</h4>
                     <p class="text-gray-700 mb-4">Join us for the monthly meeting on October 10, 2025, at 6 PM in the clubhouse.</p>
-                    <button class="read-btn bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700" data-id="2">Mark as Read</button>
+                    <button class="read-btn bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition btn-hover" data-id="2">Mark as Read</button>
                     <span class="read-status text-sm text-gray-500 hidden ml-2">Read</span>
                 </div>
             </div>
@@ -53,20 +89,23 @@
     </section>
 
     <!-- Events Section -->
-    <section id="events" class="py-12 bg-gray-50">
+    <section id="events" class="py-12 bg-gray-50 transition-colors duration-300">
         <div class="container mx-auto px-4">
-            <h3 class="text-3xl font-bold text-center mb-8">Upcoming Events</h3>
+            <h3 class="text-3xl font-bold text-center text-gray-800 mb-8">Upcoming Events</h3>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h4 class="text-xl font-semibold mb-2">Diwali Celebration</h4>
-                    <p class="text-gray-700">November 1, 2025, 7 PM - 10 PM at the community park.</p>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition fade-in">
+                    <img src="" alt="Community Iftar" class="w-full h-48 object-cover rounded-t-lg mb-4">
+                    <h4 class="text-xl font-semibold mb-2 text-gray-800">Community Iftar</h4>
+                    <p class="text-gray-700">October 30, 2025, 6 PM - 8 PM at the community park.</p>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h4 class="text-xl font-semibold mb-2">Yoga Session</h4>
-                    <p class="text-gray-700">Every Sunday in October, 8 AM at the clubhouse.</p>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition fade-in">
+                    <img src="" alt="Community Picnic" class="w-full h-48 object-cover rounded-t-lg mb-4">
+                    <h4 class="text-xl font-semibold mb-2 text-gray-800">Community Picnic</h4>
+                    <p class="text-gray-700">November 7, 2025, 10 AM - 3 PM at the riverside park.</p>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h4 class="text-xl font-semibold mb-2">Kids' Art Workshop</h4>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition fade-in">
+                    <img src="" alt="Art Workshop" class="w-full h-48 object-cover rounded-t-lg mb-4">
+                    <h4 class="text-xl font-semibold mb-2 text-gray-800">Art Workshop</h4>
                     <p class="text-gray-700">October 15, 2025, 3 PM - 5 PM at the activity center.</p>
                 </div>
             </div>
@@ -74,19 +113,45 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-12 bg-white">
-        <div class="container mx-auto px-4 text-center">
-            <h3 class="text-3xl font-bold mb-8">Contact Us</h3>
-            <p class="text-gray-700 mb-4">Reach out to the Society 17 management team:</p>
-            <p class="text-gray-700">Email: contact@society17.com</p>
-            <p class="text-gray-700">Phone: +123-456-7890</p>
-            <p class="text-gray-700">Address: 123 Society Lane, Community City</p>
+    <section id="contact" class="py-12 bg-white transition-colors duration-300">
+        <div class="container mx-auto px-4">
+            <h3 class="text-3xl font-bold text-center text-gray-800 mb-8">Contact Us</h3>
+            <div class="max-w-2xl mx-auto bg-white rounded-xl shadow-lg p-8">
+                <form id="contactForm">
+                    <div class="mb-6">
+                        <label for="name" class="block text-gray-700 mb-2">Name</label>
+                        <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
+                    </div>
+                    <div class="mb-6">
+                        <label for="email" class="block text-gray-700 mb-2">Email</label>
+                        <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
+                    </div>
+                    <div class="mb-6">
+                        <label for="message" class="block text-gray-700 mb-2">Message</label>
+                        <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" required></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-indigo-600 text-white py-3 rounded-lg font-semibold hover:bg-indigo-700 transition btn-hover">Send Message</button>
+                </form>
+            </div>
+            <div class="text-center mt-8 text-gray-700">
+                <p class="mb-2"><i class="fas fa-envelope mr-2"></i>contact@society17.com</p>
+                <p class="mb-2"><i class="fas fa-phone mr-2"></i>01401445752</p>
+                <p><i class="fas fa-map-marker-alt mr-2"></i>123 Bashundhara, Dhaka, Bangladesh</p>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-indigo-600 text-white p-4 text-center">
-        <p>&copy; 2025 Society 17. All rights reserved.</p>
+    <footer class="bg-dark-surface text-dark-text p-4 text-center transition-colors duration-300">
+        <div class="container mx-auto">
+            <p class="text-dark-secondary">Society 17 - Connecting our community in Bashundhara, Dhaka.</p>
+            <div class="flex justify-center space-x-4 my-4">
+                <a href="#" class="text-dark-secondary hover:text-dark-accent"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-dark-secondary hover:text-dark-accent"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-dark-secondary hover:text-dark-accent"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p>&copy; 2025 Society 17. All rights reserved.</p>
+        </div>
     </footer>
 
     <!-- JavaScript -->
